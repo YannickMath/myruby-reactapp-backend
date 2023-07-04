@@ -59,4 +59,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'pg'
 
 # dotenv
-gem 'dotenv-rails', groups: [:development, :test]
+gem 'dotenv-rails'
