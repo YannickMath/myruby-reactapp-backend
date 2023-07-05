@@ -13,12 +13,18 @@ class MessagesController < ApplicationController
 
     def show
         @message = Message.find(params[:id])
+        
         if @message
             render json: @message
             puts "Message trouvé !"
         else
             puts "Message introuvable"
         end
+        end
+
+    def index
+        @messages = Message.all
+        render json: @messages
         end
 
     private

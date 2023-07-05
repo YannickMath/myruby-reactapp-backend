@@ -9,6 +9,8 @@ get '/users/:id/messages', to: 'users#messages'
 post '/messages', to: 'messages#create'
 get '/messages', to: 'messages#index'
 get '/messages/:id', to: 'messages#show'
+get '/messages', to: 'messages#index'
+
 get '/messages/:id/user', to: 'messages#user'
 
 
