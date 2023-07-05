@@ -9,7 +9,7 @@ default: &default
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: yannick
-  password: babubabu
+  password:  <%= ENV['MYFIRSTRUBYAPP_DATABASE_PASSWORD'] %>
   host: localhost
 
 development:
