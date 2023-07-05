@@ -60,3 +60,6 @@ gem 'pg'
 
 # dotenv
 gem 'dotenv-rails'
+
+# devise
+gem 'devise'
