@@ -5,7 +5,7 @@
 #   gem 'sqlite3'
 #
 default: &default
-  a adapter: postgresql
+  adapter: postgresql
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: yannick
@@ -14,7 +14,9 @@ default: &default
 
 development:
   <<: *default
-  database: db/development.sqlite3
+  database: myfirstrubyapp_development
+  password: <%= ENV['MYFIRSTRUBYAPP_DATABASE_PASSWORD'] %>
+
 
 test:
   <<: *default
@@ -23,5 +25,4 @@ test:
 production:
   <<: *default
   database: myfirstrubyapp_production
-  username: yannick
   password: <%= ENV['MYFIRSTRUBYAPP_DATABASE_PASSWORD'] %>
