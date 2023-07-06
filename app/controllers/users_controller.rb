@@ -9,6 +9,29 @@ class UsersController < ApplicationController
         puts "Échec de l'enregistrement de l'utilisateur :"
         puts @user.errors.full_messages
       end
+
+      def show
+        @user = User.find(params[:id])
+        
+        if @user
+            render json: @user
+            puts "Utilisateur trouvé !"
+        else
+            puts "Utilisateur introuvable"
+        end
+        end
+        
+      def destroy
+        @user = User.find(params[:id])
+        @user.destroy
+        puts "Utilisateur supprimé avec succès !"
+      end
+
+      def index
+        @users = User.all
+        render json: @users
+        end
+        
     end
   
     private
